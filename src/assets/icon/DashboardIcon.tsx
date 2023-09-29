@@ -1,15 +1,9 @@
-import React from "react";
-import { theme } from "../theme";
+import React from 'react';
+import { theme } from '../theme';
 
 export const DashboardIcon: React.FC = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="26"
-      height="27"
-      viewBox="0 0 26 27"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" fill="none">
       <path
         d="M8.87845 1H3.20586C1.9876 1 1 1.95673 1 3.13693V8.63225C1 9.81244 1.9876 10.7692 3.20586 10.7692H8.87845C10.0967 10.7692 11.0843 9.81244 11.0843 8.63225V3.13693C11.0843 1.95673 10.0967 1 8.87845 1Z"
         stroke={theme.iconColor}

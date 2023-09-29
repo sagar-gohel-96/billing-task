@@ -1,3 +1,3 @@
 export const theme = {
-  iconColor: "white",
+  iconColor: 'white'
 };

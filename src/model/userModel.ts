@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -17,13 +17,11 @@ const userSchema = new Schema<UserSchemaEntity>(
     image: { type: String },
     age: { type: Number, required: true },
     gender: { type: String, required: true },
-    mobileNo: { type: String, required: true },
+    mobileNo: { type: String, required: true }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
 );
 
-module.exports =
-  mongoose.models.Users ||
-  mongoose.model<UserSchemaEntity>("Users", userSchema);
+module.exports = mongoose.models.Users || mongoose.model<UserSchemaEntity>('Users', userSchema);

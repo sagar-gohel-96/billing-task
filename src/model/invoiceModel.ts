@@ -1,4 +1,4 @@
-import mongoose, { ObjectId } from "mongoose";
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 export type Service = {
@@ -19,40 +19,39 @@ export interface InvoiceSchemaEntity {
 const serviceSchema = new Schema<Service>({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   price: {
     type: Number,
-    required: true,
+    required: true
   },
   quantity: {
     type: Number,
-    required: true,
-  },
+    required: true
+  }
 });
 
 const invoiceSchema = new Schema<InvoiceSchemaEntity>({
   userId: {
     type: Schema.ObjectId,
-    ref: "Users",
+    ref: 'Users'
   },
   billNo: {
     type: String,
-    required: true,
+    required: true
   },
   receiptNo: {
     type: String,
-    required: true,
+    required: true
   },
   services: [serviceSchema],
   tax: {
-    type: Number,
+    type: Number
   },
   disCount: {
-    type: Number,
-  },
+    type: Number
+  }
 });
 
 module.exports =
-  mongoose.models.Invoices ||
-  mongoose.model<InvoiceSchemaEntity>("Invoices", invoiceSchema);
+  mongoose.models.Invoices || mongoose.model<InvoiceSchemaEntity>('Invoices', invoiceSchema);

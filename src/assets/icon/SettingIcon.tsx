@@ -1,15 +1,9 @@
-import React from "react";
-import { theme } from "../theme";
+import React from 'react';
+import { theme } from '../theme';
 
 export const SettingIcon: React.FC = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="26"
-      viewBox="0 0 24 26"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"

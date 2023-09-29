@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const Patient = () => {
   return (
     <div
       style={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
       Patient
     </div>
   );
