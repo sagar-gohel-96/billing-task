@@ -1,12 +1,5 @@
 import { Box, Divider, Typography } from "@mui/material";
-import React, {
-  Dispatch,
-  SetStateAction,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { BasicButton } from "..";
 import { User } from "@/src/data/userData";
 import axios from "axios";

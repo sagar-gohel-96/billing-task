@@ -16,12 +16,15 @@ export const SidebarItem: React.FC<SidebarItemProps> = (props) => {
     <Box
       onClick={() => router.push(path)}
       sx={
-        router.pathname !== path
+        router.pathname.slice(1) === path
           ? {
               display: "flex",
-              height: "52px",
               width: "214px",
+              height: "42px",
               alignItems: "center",
+              backgroundColor: "#9795CD",
+              padding: "10px",
+              borderRadius: "8px",
               ":hover": {
                 cursor: "pointer",
               },
@@ -30,7 +33,11 @@ export const SidebarItem: React.FC<SidebarItemProps> = (props) => {
               display: "flex",
               height: "52px",
               width: "214px",
-              backgroundColor: "red",
+              padding: "10px",
+              alignItems: "center",
+              ":hover": {
+                cursor: "pointer",
+              },
             }
       }
     >
@@ -41,7 +48,6 @@ export const SidebarItem: React.FC<SidebarItemProps> = (props) => {
         sx={{
           fontSize: "16px",
           fontWeight: 400,
-          lineHeight: "150%",
           color: "white",
           fontStyle: "normal",
         }}
