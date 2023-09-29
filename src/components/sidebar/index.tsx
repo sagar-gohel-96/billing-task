@@ -44,10 +44,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
           flex: 1,
           flexDirection: "column",
           justifyContent: "space-between",
-          gap: "20px",
         }}
       >
-        <Stack sx={{ margin: "20px" }}>
+        <Stack
+          sx={{
+            margin: "20px",
+            borderBottom: "1px solid #eee",
+            paddingBottom: "20px",
+          }}
+        >
           {sidebarItems &&
             sidebarItems?.map((sidebarItem: SidebarItemType, index: number) => (
               <SidebarItem
@@ -58,13 +63,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
               />
             ))}
         </Stack>
-        <Box
-          sx={{
-            height: "1px",
-            color: "red",
-            backgroundColor: "#eee",
-          }}
-        />
         <Stack sx={{ margin: "20px" }}>
           {sidebarBottomItmes &&
             sidebarBottomItmes?.map(
