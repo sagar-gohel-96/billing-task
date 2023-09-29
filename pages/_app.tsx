@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const sidebarBottomItmes: SidebarItemType[] = useMemo(() => {
     return [
-      { icon: <SupportIcon />, title: "support", path: "/support" },
+      { icon: <SupportIcon />, title: "support", path: "support" },
       { icon: <SettingIcon />, title: "settings", path: "settings" },
     ];
   }, []);
