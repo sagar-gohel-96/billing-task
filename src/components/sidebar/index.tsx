@@ -3,6 +3,8 @@ import { SidebarItem } from "..";
 import Box from "@mui/material/Box";
 import { SidebarItemType } from "@/pages";
 import Stack from "@mui/material/Stack";
+import { useRouter } from "next/router";
+import { Divider } from "@mui/material";
 interface SidebarProps {
   sidebarItems: SidebarItemType[];
   sidebarBottomItmes: SidebarItemType[];
@@ -12,6 +14,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   sidebarItems,
   sidebarBottomItmes,
 }) => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -19,6 +22,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
         backgroundColor: "#312E81",
         boxShadow:
           "0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box
@@ -28,6 +33,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           fontSize: "30px",
           fontWeight: 700,
           fontStyle: "normal",
+          padding: "20px",
         }}
       >
         LOGO
@@ -35,11 +41,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <Stack
         sx={{
           display: "flex",
+          flex: 1,
           flexDirection: "column",
           justifyContent: "space-between",
+          gap: "20px",
         }}
       >
-        <Stack sx={{ margin: "20px", marginLeft: 0 }}>
+        <Stack sx={{ margin: "20px" }}>
           {sidebarItems &&
             sidebarItems?.map((sidebarItem: SidebarItemType, index: number) => (
               <SidebarItem
@@ -50,6 +58,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
               />
             ))}
         </Stack>
+        <Box
+          sx={{
+            height: "1px",
+            color: "red",
+            backgroundColor: "#eee",
+          }}
+        />
         <Stack sx={{ margin: "20px" }}>
           {sidebarBottomItmes &&
             sidebarBottomItmes?.map(
